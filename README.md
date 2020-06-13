@@ -1,6 +1,6 @@
 # datoji
 
-A FREE RESTful HTTP based JSON API. It lets you create, read, update, delete and search JSON data over HTTP APIs. Ideal for small hobbies projects, MVP or hackathons, where you don't need to create your personal data storage.
+A FREE RESTful HTTP based JSON API. It lets you create, read, update, delete and search JSON data over HTTP APIs. Ideal for small hobbies projects, MVP or just for fun, where you don't need to create your personal data storage.
 
 
 ## Schema
@@ -356,8 +356,8 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=davide' -H 'Authorizati
 ```
 
 ## Limitations
-Requests are rate-limited to **400** per 5 minutes per IP address.
-There is no limit imposed on the number of entries or packs records, but please **don't abuse** it since it's a service i offer free of charge. 
+* Requests are rate-limited to **400** per 5 minutes per IP address.
+* There is no limit imposed on the number of entries or packs records, but please **don't abuse** it since it's a service i offer free of charge. 
 
 ## Built With
 
