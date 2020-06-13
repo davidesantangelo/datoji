@@ -18,5 +18,5 @@ test:
 
 production:
   <<: *default
-  pool: 20
-  database: datoji_production
+  pool: 25
+  database: datoji
