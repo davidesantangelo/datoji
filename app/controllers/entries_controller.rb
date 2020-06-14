@@ -12,9 +12,11 @@ class EntriesController < BaseController
 
   # GET /packs/:id/entries.json
   def index
-    @pagy, entries = pagy Entry.where(pack_id: params[:pack_id])
+    @pagy, @entries = pagy Entry.where(pack_id: params[:pack_id])
 
-    json_response_with_serializer(entries, Serializer::ENTRY)
+    @entries = @entries.reorder(created_at: params[:order].to_sym) if params[:order].present?
+
+    json_response_with_serializer(@entries, Serializer::ENTRY)
   end
 
   # GET /packs/:id/entries/:id.json
