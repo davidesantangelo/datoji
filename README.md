@@ -36,6 +36,17 @@ JSON:API is designed to minimize both the number of requests and the amount of d
 }
 ```
 
+## Pagination
+
+Requests that return multiple items will be paginated to 20 items by default. You can specify further pages with the ```?page``` parameter. Pagination information is available inside **headers**. Example:
+
+```
+Current-Page: 1
+Per-Page: 20
+Link:<https://datoji.dev/packs/{PACK_ID}/entries?page=1>; rel="first", <https://datoji.dev/packs/{PACK_ID}/entries?page=24>; rel="last"
+Total: 464
+```
+
 ## Documentation
 
 **Authentication**
@@ -118,7 +129,7 @@ curl -X DELETE 'https://datoji.dev/packs/{PACK_ID}' -H 'content-type: applicatio
     
 ```
 
-## CRUD/S ENTRY
+## CRUD ENTRY
 
 **Create**
 
@@ -303,8 +314,7 @@ To delete a specific record use HTTP DELETE, you will receive in case of success
 curl -X DELETE 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' -H 'Authorization: Token {KEY}'
 
 ```
-
-**Search**
+## Search
 
 You can perform searches within the dataset.
 
