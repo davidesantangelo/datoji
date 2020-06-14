@@ -138,7 +138,7 @@ curl -X DELETE 'https://datoji.dev/packs/{PACK_ID}' -H 'content-type: applicatio
 curl -X POST 'https://datoji.dev/{PACK_ID}/entries' \
     -H 'content-type: application/json' \
     -H 'Authorization: Token {KEY}' \
-    -d '{ "entry": { "name": "Davide Santangelo", "role":"software developer" } }'
+    -d '{ "entry": { "repo": "davidesantangelo/datoji", "private": false, "stargazers_count": 0 } }'
     
 ```
 
@@ -150,8 +150,9 @@ curl -X POST 'https://datoji.dev/{PACK_ID}/entries' \
     "type": "entry",
     "attributes": {
       "data": {
-        "name": "Davide Santangelo",
-        "role": "software developer"
+        "repo": "davidesantangelo/datoji",
+        "private": "false",
+        "stargazers_count": 0
       },
       "created_at": "2020-06-11T14:37:34.857Z",
       "updated_at": "2020-06-11T14:37:34.857Z"
@@ -188,8 +189,9 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries' -H 'Authorization: Toke
       "type": "entry",
       "attributes": {
         "data": {
-          "name": "Paolo Santangelo",
-          "role": "Software Developer"
+          "repo": "davidesantangelo/datoji",
+          "private": "false",
+          "stargazers_count": 0
         },
         "created_at": "2020-06-11T14:59:00.581Z",
         "updated_at": "2020-06-11T14:59:00.581Z"
@@ -208,8 +210,9 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries' -H 'Authorization: Toke
       "type": "entry",
       "attributes": {
         "data": {
-          "name": "Davide Santangelo",
-          "role": "software developer"
+          "repo": "davidesantangelo/feedirss-api",
+          "private": "false",
+          "stargazers_count": 326
         },
         "created_at": "2020-06-11T14:37:08.293Z",
         "updated_at": "2020-06-11T14:37:08.293Z"
@@ -243,9 +246,10 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' -H 'Authoriz
     "type": "entry",
     "attributes": {
       "data": {
-        "name": "Davide Santangelo",
-        "role": "software developer"
-      },
+        "repo": "davidesantangelo/feedirss-api",
+        "private": "false",
+        "stargazers_count": 326
+       },
       "created_at": "2020-06-11T14:37:34.857Z",
       "updated_at": "2020-06-11T14:37:34.857Z"
     },
@@ -271,7 +275,7 @@ Use HTTP PUT to update record one by one. Please note that this will not patch t
 curl -X PUT 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' \
     -H 'content-type: application/json' \
     -H 'Authorization: Token {KEY}' \
-    -d '{ "entry": {"name": "Davide Santangelo", "role": "Web Developer", "github":"davidesantangelo"} }'
+    -d '{ "entry": { "repo": "davidesantangelo/datoji", "private": true, "stargazers_count": 10 } }'
     
 ```
 
@@ -284,9 +288,9 @@ curl -X PUT 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' \
     "attributes": {
       "data": {
         "entry": {
-          "name": "Davide Santangelo",
-          "role": "Web Developer",
-          "github": "davidesantangelo"
+          "repo": "davidesantangelo/datoji",
+          "private": true,
+          "stargazers_count": 10
         }
       },
       "created_at": "2020-06-11T14:37:34.857Z",
@@ -331,7 +335,7 @@ Supporting:
 
 ```sh
 
-curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=davide' -H 'Authorization: Token {KEY}'
+curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorization: Token {KEY}'
 
 ```
 
@@ -344,10 +348,10 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=davide' -H 'Authorizati
       "type": "entry",
       "attributes": {
         "data": {
-          "name": "Davide Santangelo",
-          "role": "software developer",
-          "website": "davidesantangelo.com"
-        },
+          "repo": "davidesantangelo/datoji",
+          "private": true,
+          "stargazers_count": 10
+        }
         "created_at": "2020-06-11T14:37:08.293Z",
         "updated_at": "2020-06-11T14:37:08.293Z"
       },
