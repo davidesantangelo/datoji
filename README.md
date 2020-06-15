@@ -392,6 +392,10 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorizati
 - [ ] GraphQL Insert
 - [ ] Webhook
 
+## Buy me a coffee
+
+If you want to support me in server costs, consider [buying me a coffee](https://www.buymeacoffee.com/582rhJH)! Thanks!
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/davidesantangelo/datoji. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
