@@ -386,6 +386,12 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorizati
 - [Textacular](https://github.com/textacular/textacular) &mdash; Textacular exposes full text search capabilities from PostgreSQL.
 - [Rack::Attack](https://github.com/kickstarter/rack-attack) &mdash; Rack middleware for blocking & throttling abusive requests.
 
+## To Do
+
+- [ ] Bulk Insert
+- [ ] GraphQL Insert
+- [ ] Webhook
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/davidesantangelo/datoji. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
