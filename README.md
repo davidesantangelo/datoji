@@ -174,6 +174,10 @@ curl -X POST 'https://datoji.dev/{PACK_ID}/entries' \
 
 Use HTTP GET to read all the records or a single record.
 
+
+You can also specify a param **&order=[asc/desc]** by *created_at* field. Can be one of asc or desc. Default: desc.
+
+
 ```sh
 
 curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries' -H 'Authorization: Token {KEY}'
