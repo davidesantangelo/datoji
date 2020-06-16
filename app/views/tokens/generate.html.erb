@@ -1,0 +1,18 @@
+<section class="text-gray-600 body-font">
+  
+  <div class="container mx-auto flex items-center justify-center flex-col">
+        
+    <div class="bg-indigo-100 border-t-4 border-indigo-500 text-indigo-900 px-4 py-6 mt-20 shadow-md" role="alert">
+      <div class="flex">
+        <div>
+          <p class="font-base">Copy the Token below and start sending HTTP requests to have fun with your JSON data store.</p>
+          <input value="<%= @token.key %>"class="mt-5 mb-5 bg-white focus:outline-none focus:shadow-outline border border-gray-300 py-2 px-4 block w-full appearance-none leading-normal" type="email" placeholder="jane@example.com">
+        </div>
+      </div>
+      <a href="https://github.com/davidesantangelo/datoji"><i class="fab fa-github"></i> Read Docs</a>
+        <%= image_tag("logo", class: 'lg:w-1/12 md:w-4/12 sm:w-4/12 w-4/12 absolute bottom-0 right-0') %>
+    </div>
+  </div>
+</section>
+
+<%= render 'shared/footer' %>
