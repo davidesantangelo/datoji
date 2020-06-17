@@ -18,9 +18,9 @@ class EntriesController < BaseController
         updated_at: Time.current }
     end
 
-    result = @pack.entries.insert_all!(entries, returning: %w[id])
+    @pagy, @ids = pagy_array @pack.entries.insert_all!(entries, returning: %w[id]).rows.flatten
 
-    json_success_response(result)
+    json_success_response(@ids)
   end
 
   # GET /packs/:id/entries.json
