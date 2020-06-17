@@ -170,7 +170,7 @@ curl -X POST 'https://datoji.dev/{PACK_ID}/entries' \
 
 ```
 
-You can also create multiple records at once by passing an array
+You can also create multiple records at once by passing an array.
 
 ```sh
 
@@ -181,17 +181,13 @@ curl -X POST 'https://datoji.dev/{PACK_ID}/entries/bulk' \
     
 ```
 
+The result in case of success is an array of IDs.
+
 ```
 [
-  {
-    "id": "3ef4168c-4f44-43ac-9ea1-72db224a303f"
-  },
-  {
-    "id": "ae531e7b-ab0e-4ea3-991c-9b198ed7c96b"
-  },
-  {
-    "id": "1d7e6350-cd82-43fd-ae9a-b087a5e6ab8b"
-  }
+  "6403b952-ce7d-4759-96d9-c8a913e166ec",
+  "5993d6b2-16cd-4d78-a7c8-2aba0f27af0d",
+  "b5861049-7c4d-485d-b795-669b9578b78d"
 ]
 ```
 
