@@ -415,6 +415,8 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorizati
 - [Textacular](https://github.com/textacular/textacular) &mdash; Textacular exposes full text search capabilities from PostgreSQL.
 - [Rack::Attack](https://github.com/kickstarter/rack-attack) &mdash; Rack middleware for blocking & throttling abusive requests.
 
+- [Pagy](https://github.com/ddnexus/pagy) &mdash; The ultimate pagination ruby gem.
+
 ## To Do
 
 - [x] Bulk Insert
