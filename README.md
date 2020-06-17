@@ -417,8 +417,8 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorizati
 
 ## To Do
 
-- [ ] Bulk Insert
-- [ ] GraphQL Insert
+- [x] Bulk Insert
+- [ ] GraphQL
 - [ ] Webhook
 
 ## Buy me a coffee
