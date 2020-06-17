@@ -10,9 +10,22 @@ class EntriesController < BaseController
     json_response_with_serializer(@entry, Serializer::ENTRY)
   end
 
+  # POST /packs/:id/entries/bulk.json
+  def bulk
+    entries = bulk_entry_params.map do |entry|
+      { data: entry,
+        created_at: Time.current,
+        updated_at: Time.current }
+    end
+
+    result = @pack.entries.insert_all!(entries, returning: %w[id])
+
+    json_success_response(result)
+  end
+
   # GET /packs/:id/entries.json
   def index
-    @pagy, @entries = pagy Entry.where(pack_id: params[:pack_id])
+    @pagy, @entries = pagy @pack.entries
 
     @entries = @entries.reorder(created_at: params[:order].to_sym) if params[:order].present?
 
@@ -50,5 +63,9 @@ class EntriesController < BaseController
 
   def entry_params
     params.require(:entry).permit!
+  end
+
+  def bulk_entry_params
+    params.require(:entries)
   end
 end
