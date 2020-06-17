@@ -109,6 +109,14 @@ curl -X POST 'https://datoji.dev/packs' -H 'content-type: application/json' -H '
 
 ```
 
+**Read**
+
+```sh
+
+curl -X GET 'https://datoji.dev/packs/{PACK_ID}' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
+    
+```
+
 **Clear**
 
 With the clear method you can clean the pack from all entries.
