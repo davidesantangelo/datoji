@@ -170,6 +170,31 @@ curl -X POST 'https://datoji.dev/{PACK_ID}/entries' \
 
 ```
 
+You can also create multiple records at once by passing an array
+
+```sh
+
+curl -X POST 'https://datoji.dev/{PACK_ID}/entries/bulk' \
+    -H 'content-type: application/json' \
+    -H 'Authorization: Token {KEY}' \
+    -d '{ "entries": [{ "repo": "davidesantangelo/datoji" },{ "repo": "davidesantangelo/tuns" },{ "repo": "davidesantangelo/emailhunter" }]}'
+    
+```
+
+```
+[
+  {
+    "id": "3ef4168c-4f44-43ac-9ea1-72db224a303f"
+  },
+  {
+    "id": "ae531e7b-ab0e-4ea3-991c-9b198ed7c96b"
+  },
+  {
+    "id": "1d7e6350-cd82-43fd-ae9a-b087a5e6ab8b"
+  }
+]
+```
+
 **Read**
 
 Use HTTP GET to read all the records or a single record.
