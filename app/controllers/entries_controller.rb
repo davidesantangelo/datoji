@@ -54,7 +54,7 @@ class EntriesController < BaseController
   private
 
   def set_pack
-    @pack = Pack.find(params[:pack_id])
+    @pack = current_packs.find(params[:pack_id])
   end
 
   def set_pack_entry

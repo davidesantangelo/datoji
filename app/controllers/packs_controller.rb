@@ -37,7 +37,7 @@ class PacksController < BaseController
   private
 
   def set_pack
-    @pack = Pack.find(params[:id])
+    @pack = current_packs.find(params[:id])
   end
 
   def pack_params
