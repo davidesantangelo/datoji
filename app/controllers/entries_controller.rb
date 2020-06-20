@@ -14,11 +14,12 @@ class EntriesController < BaseController
   def bulk
     entries = bulk_entry_params.map do |entry|
       { data: entry,
+        pack_id: @pack.id,
         created_at: Time.current,
         updated_at: Time.current }
     end
 
-    @pagy, @ids = pagy_array @pack.entries.insert_all!(entries, returning: %w[id]).rows.flatten
+    @pagy, @ids = pagy_array Entry.insert_all!(entries, returning: %w[id]).rows.flatten
 
     json_success_response(@ids)
   end
