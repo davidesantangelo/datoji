@@ -7,4 +7,5 @@ class Entry < ApplicationRecord
 
   # validations
   validates :data, presence: true
+  validates :pack, presence: true
 end

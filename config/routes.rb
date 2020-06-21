@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
   root 'static#index'
 
-  resources :tokens, only: [:create] do
-    collection do
-      get :generate
-    end
-  end
+  resources :tokens, only: [:create]
 
   resources :packs, only: %i[index create show destroy] do
     member do
