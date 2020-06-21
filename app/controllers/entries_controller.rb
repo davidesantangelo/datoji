@@ -21,6 +21,8 @@ class EntriesController < BaseController
 
     @pagy, @ids = pagy_array Entry.insert_all!(entries, returning: %w[id]).rows.flatten
 
+    Pack.reset_counters(@pack.id, :entries)
+
     json_success_response(@ids)
   end
 
