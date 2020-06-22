@@ -426,6 +426,10 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorizati
 
 If you want to support me in server costs, consider [buying me a coffee](https://www.buymeacoffee.com/582rhJH)! Thanks!
 
+## Spread The Voice
+
+[![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social)](https://twitter.com/intent/tweet?text=A%20tiny%20JSON%20storage%20service.%20Create,%20Read,%20Update,%20Delete%20and%20Search%20JSON%20data&url=https://github.com/davidesantangelo/datoji&hashtags=json,rest,rails,developers)
+
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/davidesantangelo/datoji. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
