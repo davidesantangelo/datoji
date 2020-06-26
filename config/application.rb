@@ -14,7 +14,7 @@ module Datoji
     config.middleware.insert_before 0, Rack::Cors do
       allow do
         origins '*'
-        resource '*', headers: :any, methods: %i[get post options], expose: %w[Current-Page Total Per-Page Link]
+        resource '*', headers: :any, methods: %i[get post put patch delete options head], expose: %w[Current-Page Total Per-Page Link]
       end
     end
 
