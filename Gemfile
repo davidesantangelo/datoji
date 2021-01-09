@@ -29,7 +29,7 @@ gem 'redis', '~> 4.0'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false
-gem 'fast_jsonapi', git: 'https://github.com/fast-jsonapi/fast_jsonapi'
+gem 'jsonapi-serializer'
 gem 'hashie'
 gem 'pagy'
 gem 'rack-attack'

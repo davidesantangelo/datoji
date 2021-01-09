@@ -1,4 +1,4 @@
 class TokenSerializer
-  include FastJsonapi::ObjectSerializer
+  include JSONAPI::Serializer
   attributes :key, :created_at
 end

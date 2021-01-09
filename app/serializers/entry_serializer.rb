@@ -1,5 +1,5 @@
 class EntrySerializer
-  include FastJsonapi::ObjectSerializer
+  include JSONAPI::Serializer
   belongs_to :pack
   attributes :data, :created_at, :updated_at
 end
