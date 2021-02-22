@@ -91,6 +91,23 @@ A Pack is a container of all the entries. Before you can create the entries you 
 curl -X POST 'https://datoji.dev/packs' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
     
 ```
+### Body
+
+```json
+{
+  "entries": [
+    { 
+      "entry": 
+        {
+          "name": "Davide Santangelo", 
+          "role": "Senior Team Lead" 
+        } 
+    }
+  ]
+}
+```
+
+### result
 
 ```json
 
@@ -100,7 +117,6 @@ curl -X POST 'https://datoji.dev/packs' -H 'content-type: application/json' -H '
     "type": "pack",
     "attributes": {
       "entries_count": 0,
-      "active": true,
       "created_at": "2020-06-11T14:22:12.354Z",
       "updated_at": "2020-06-11T14:22:12.354Z"
     }
