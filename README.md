@@ -5,7 +5,7 @@ A FREE RESTful HTTP based JSON API. It lets you create, read, update, delete and
 
 ## Schema
 
-All API access is over HTTPS, and accessed from https://datoji.dev. All data is sent and received as JSON.
+All API access is over HTTPS, and accessed from https://localhost:3000. All data is sent and received as JSON.
 
 Blank fields are included as null instead of being omitted.
 
@@ -43,7 +43,7 @@ Requests that return multiple items will be paginated to 20 items by default. Yo
 ```
 Current-Page: 1
 Per-Page: 20
-Link:<https://datoji.dev/packs/{PACK_ID}/entries?page=1>; rel="first", <https://datoji.dev/packs/{PACK_ID}/entries?page=24>; rel="last"
+Link:<https://localhost:3000/packs/{PACK_ID}/entries?page=1>; rel="first", <https://localhost:3000/packs/{PACK_ID}/entries?page=24>; rel="last"
 Total: 464
 ```
 
@@ -56,7 +56,7 @@ API uses OAuth 2.0 token for user authorization and API authentication. Applicat
     
 ```sh
 
-curl -X POST 'https://datoji.dev/tokens' -H 'content-type: application/json'
+curl -X POST 'https://localhost:3000/tokens' -H 'content-type: application/json'
 
 ```
 
@@ -88,7 +88,7 @@ A Pack is a container of all the entries. Before you can create the entries you 
 
 ```sh
 
-curl -X POST 'https://datoji.dev/packs' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
+curl -X POST 'https://localhost:3000/packs' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
     
 ```
 ### Body
@@ -129,7 +129,7 @@ curl -X POST 'https://datoji.dev/packs' -H 'content-type: application/json' -H '
 
 ```sh
 
-curl -X GET 'https://datoji.dev/packs/{PACK_ID}' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
+curl -X GET 'https://localhost:3000/packs/{PACK_ID}' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
     
 ```
 
@@ -139,7 +139,7 @@ With the clear method you can clean the pack from all entries.
 
 ```sh
 
-curl -X POST 'https://datoji.dev/packs/{PACK_ID}/clear' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
+curl -X POST 'https://localhost:3000/packs/{PACK_ID}/clear' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
     
 ```
 
@@ -149,7 +149,7 @@ With the clear method you can clean the pack from all entries.
 
 ```sh
 
-curl -X DELETE 'https://datoji.dev/packs/{PACK_ID}' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
+curl -X DELETE 'https://localhost:3000/packs/{PACK_ID}' -H 'content-type: application/json' -H 'Authorization: Token {KEY}'
     
 ```
 
@@ -159,7 +159,7 @@ curl -X DELETE 'https://datoji.dev/packs/{PACK_ID}' -H 'content-type: applicatio
 
 ```sh
 
-curl -X POST 'https://datoji.dev/{PACK_ID}/entries' \
+curl -X POST 'https://localhost:3000/{PACK_ID}/entries' \
     -H 'content-type: application/json' \
     -H 'Authorization: Token {KEY}' \
     -d '{ "entry": { "repo": "davidesantangelo/datoji", "private": false, "stargazers_count": 0 } }'
@@ -198,7 +198,7 @@ You can also create multiple records at once by passing an array.
 
 ```sh
 
-curl -X POST 'https://datoji.dev/{PACK_ID}/entries/bulk' \
+curl -X POST 'https://localhost:3000/{PACK_ID}/entries/bulk' \
     -H 'content-type: application/json' \
     -H 'Authorization: Token {KEY}' \
     -d '{ "entries": [{ "repo": "davidesantangelo/datoji" },{ "repo": "davidesantangelo/tuns" },{ "repo": "davidesantangelo/emailhunter" }]}'
@@ -225,7 +225,7 @@ You can also specify a param **&order=[asc/desc]** by *created_at* field. Can be
 
 ```sh
 
-curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries' -H 'Authorization: Token {KEY}'
+curl -X GET 'https://localhost:3000/packs/{PACK_ID}/entries' -H 'Authorization: Token {KEY}'
 
 ```
 
@@ -283,7 +283,7 @@ curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries' -H 'Authorization: Toke
 
 ```sh
 
-curl -X GET 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' -H 'Authorization: Token {KEY}'
+curl -X GET 'https://localhost:3000/packs/{PACK_ID}/entries/{ENTRY_ID}' -H 'Authorization: Token {KEY}'
 
 ```
 
@@ -321,7 +321,7 @@ Use HTTP PUT to update record one by one. Please note that this will not patch t
 
 ``` sh
 
-curl -X PUT 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' \
+curl -X PUT 'https://localhost:3000/packs/{PACK_ID}/entries/{ENTRY_ID}' \
     -H 'content-type: application/json' \
     -H 'Authorization: Token {KEY}' \
     -d '{ "entry": { "repo": "davidesantangelo/datoji", "private": true, "stargazers_count": 10 } }'
@@ -364,7 +364,7 @@ To delete a specific record use HTTP DELETE, you will receive in case of success
 
 ```sh
 
-curl -X DELETE 'https://datoji.dev/packs/{PACK_ID}/entries/{ENTRY_ID}' -H 'Authorization: Token {KEY}'
+curl -X DELETE 'https://localhost:3000/packs/{PACK_ID}/entries/{ENTRY_ID}' -H 'Authorization: Token {KEY}'
 
 ```
 ## Search
@@ -384,7 +384,7 @@ Supporting:
 
 ```sh
 
-curl -X GET 'https://datoji.dev/packs/{PACK_ID}/search?q=datoji' -H 'Authorization: Token {KEY}'
+curl -X GET 'https://localhost:3000/packs/{PACK_ID}/search?q=datoji' -H 'Authorization: Token {KEY}'
 
 ```
 
